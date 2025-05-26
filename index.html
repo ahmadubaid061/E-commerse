@@ -172,105 +172,101 @@
             background-color:rgb(214, 223, 223)  ;
             padding: 20px;
          }
-         @media(max-width:768px){
-            header{
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                background-color: rgb(214, 223, 223);
-                height: fit-content;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                
-
-            }
-            header .logo{
-               align-self: center;
-               padding-bottom: 10px;
-            }
-            .logo h3{
-                margin-top: 20px;
-            }
-            nav{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding-right: 10px;
-                padding-left: 10px;
-                
-            }
-            
-            nav a{
-                margin-top: 0;
-                margin-bottom: 0;
-                
-            }
-            .search-container{
-                display: flex;
-                flex-direction: row;
-                margin-top: 0;
-                margin-bottom: 0;
-                width: 50%;
-            }
-            .search-container input{
-                            padding: 0px 0px; /* Add padding for better usability */
-                            box-sizing: border-box; /* Ensure padding doesn't affect width */
-                            width:90%;
-                            margin-right: 0%;
-                        }
-            main{
-                margin-top: 60px;
-            }
-            #home{
-                height: fit-content;
-            }
-            #home p{
-                margin-left: 5%;
-                margin-right: 5% ;
-
-            }
-            .product a{
-                width: auto;
-                gap: 10px;
-            }
-            .crd img{
-                height: 20vh;
-            }
-            .crd{
-                font-size: 10px;
-            }
-            section{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                width:100%;
-            }
-            .box{
-                width: 48%;
-                padding: 10px;
-                background-color: rgb(214, 223, 223);
-                height: auto;
-                margin-bottom: 10px;
-            }
-            h3{
-                margin-top: 0%;
-                margin-bottom: 0%;
-            }
-            .box p{
-                
-                margin-top: 0%;
-            }
-            .box img{
-                cursor: pointer;
-            }
-            .box button{
-                width: 40%;
-            }
-            #contact{
-                display: grid;
-                grid-template-columns: 1fr;
-            }
-         }
-
+         @media(max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(214, 223, 223);
+        height: fit-content;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    header .logo {
+        align-self: center;
+        padding-bottom: 10px;
+    }
+    .logo h3 {
+        margin-top: 20px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    nav a {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .search-container input {
+        padding: 0px 0px;
+        box-sizing: border-box;
+        width: 90%;
+        margin-right: 0%;
+    }
+    main {
+        margin-top: 60px;
+    }
+    #home {
+        height: fit-content;
+    }
+    #home p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .product a {
+        width: auto;
+        gap: 10px;
+    }
+    .crd img {
+        height: 20vh;
+    }
+    .crd {
+        font-size: 10px;
+    }
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 2px; /* Reduced gap to minimize space */
+        padding-left: 0; /* Remove left padding to center content */
+        justify-content: center; /* Center the grid items */
+    }
+    .box {
+        width: 48%; /* Slightly increased to better fill space */
+        padding: 5px; /* Reduced padding for tighter layout */
+        background-color: rgb(214, 223, 223);
+        height: auto;
+        margin-bottom: 10px;
+        box-sizing: border-box; /* Ensure padding doesn't add to width */
+    }
+    h3 {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    .box p {
+        margin-top: 0%;
+    }
+    .box img {
+        cursor: pointer;
+    }
+    .box button {
+        width: 40%;
+    }
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
