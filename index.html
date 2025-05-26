@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gull Sports</title>
+     <link rel="icon" type="image/x-icon" href="icon.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color:rgb(214, 223, 223);
+            height: 10vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            position: fixed; 
+            border-bottom: 1px solid black;
+
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .logo img{
+            margin-left: 10px;
+            width: 10vh;
+        
+
+        }
+       
+        .nav{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-right: 20px;
+        }
+        .search-container{
+            margin-top: 18px;
+        }
+        nav a{
+            margin-top: 18px;
+            color: black;
+        }
+        main{
+            padding-top: 50px;
+        }
+        #home{
+            text-align: center;
+            height: 80vh;
+            width: 100%;
+        }
+        #home p{
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 30px;
+            padding-left: 5%;
+            
+        }
+        .product a{
+            width: auto;
+            
+        }
+        .crd{
+            width: fit-content;
+            box-shadow: 10px 10px 10px rgb(214, 223, 223);
+            transition: transform 1.2s;
+            
+        }
+        .crd:hover{
+            transform: scale(1.2);
+            
+        }
+        .crd img{
+            width: 100%;
+            height: 40vh;
+            
+
+
+        }
+        .crd h3{
+            margin-top: 0px;
+            padding-bottom: 10px;
+        }
+        .box button{
+            width: 0%;
+        }
+        main h2{
+            padding-left: 2%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+        section{
+            padding-left: 10px;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+            width: 100%;
+            gap: 5px;
+           
+        }
+        .box{
+            width: 200px;
+            padding: 10px;
+            background-color: rgb(214, 223, 223);
+        }
+        .box img{
+            width:100%;
+            height: 60%;
+            cursor: pointer;
+        }
+        /* Added for image overlay functionality */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            cursor: pointer;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid white;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        #contact{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;       
+         }
+        
+         #contact{
+            gap: 40px;
+
+         }
+         .boxx{
+            padding: 10px;
+            box-shadow: 10px 10px 10px rgb(214, 223, 223) ;
+            border-top: 1px solid;
+            border-left: 1px solid;
+         }
+         form div{
+            display: flex;
+            flex-direction: column;
+         }
+         .boxx::content{
+            width: 100%;
+         }
+         footer{
+            text-align: center;
+            background-color:rgb(214, 223, 223)  ;
+            padding: 20px;
+         }
+         @media(max-width:768px){
+            header{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgb(214, 223, 223);
+                height: fit-content;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+
+            }
+            header .logo{
+               align-self: center;
+               padding-bottom: 10px;
+            }
+            .logo h3{
+                margin-top: 20px;
+            }
+            nav{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-right: 10px;
+                padding-left: 10px;
+                
+            }
+            
+            nav a{
+                margin-top: 0;
+                margin-bottom: 0;
+                
+            }
+            .search-container{
+                display: flex;
+                flex-direction: row;
+                margin-top: 0;
+                margin-bottom: 0;
+                width: 50%;
+            }
+            .search-container input{
+                            padding: 0px 0px; /* Add padding for better usability */
+                            box-sizing: border-box; /* Ensure padding doesn't affect width */
+                            width:90%;
+                            margin-right: 0%;
+                        }
+            main{
+                margin-top: 60px;
+            }
+            #home{
+                height: fit-content;
+            }
+            #home p{
+                margin-left: 5%;
+                margin-right: 5% ;
+
+            }
+            .product a{
+                width: auto;
+                gap: 10px;
+            }
+            .crd img{
+                height: 20vh;
+            }
+            .crd{
+                font-size: 10px;
+            }
+            section{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .box{
+                width: 100px;
+                padding: 10px;
+                background-color: rgb(214, 223, 223);
+                height: auto;
+                margin-bottom: 10px;
+            }
+            h3{
+                margin-top: 0%;
+                margin-bottom: 0%;
+            }
+            .box p{
+                
+                margin-top: 0%;
+            }
+            .box img{
+                cursor: pointer;
+            }
+            .box button{
+                width: 40%;
+            }
+            #contact{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+         }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+            <h3>Gull SPorts</h3>
+
+        </div>
+        <div class="nav">
+            <nav>
+              <div class="search-container">
+                        <input type="text" placeholder="search...." name="search">
+                    <button type="submit">
+                        <i class="fa fa-search">
+                            
+                        </i>
+                    </button>
+              </div>
+            <a href="#home">Home</a>
+            <a href="#contact">contact us</a>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div id="home">
+            <h1>Welcome To Gull Sports</h1>
+            <p>Welcome to our sports shop! Discover top-quality gear for every athlete,  from beginners to pros. Explore our wide range of equipment, apparel, and  accessories  designed to elevate your game. Shop now for the best brands, unbeatable prices, and expert advice to fuel your passion for sports. Get ready to perform at your peak!</p>
+            <div class="products">
+                <a href="#cricket">
+                    <div class="crd">
+                        <img src="cricket.jpg" alt="">
+                        <h3>Cricket products</h3>
+                    </div>
+                </a>
+                <a href="#football">
+                    <div class="crd">
+                        <img src="football.jpg" alt="">
+                        <h3>football products</h3>
+                    </div>
+                </a>
+                <a href="#tennis">
+                    <div class="crd">
+                        <img src="tennis.jpg" alt="">
+                        <h3>Tennis products</h3>
+                    </div>
+                </a>
+                <a href="#hockey">
+                    <div class="crd">
+                        <img src="hockey.jpg" alt="">
+                        <h3>Hockey products</h3>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+        <h2>CRICKET</h2>
+        <section id="cricket">
+            <div class="box">
+                <img src="bat.jpg" alt="">
+                <h3>bat
+
+                </h3>
+                <p>Price: $100</p>
+                <button> cart</button>
+            </div>
+             <div class="box">
+                <img src="bat2.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+             <div class="box">
+                <img src="bat3.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+             <div class="box">
+                <img src="bat4.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="bat5.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="bat6.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="bat6.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="bat6.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="bat6.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="bat6.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="ball.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="ball2.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="ball3.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="ball4.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="ball5.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="wkt.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="wkt.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="wkt4.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="wkt2.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="wkt3.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="gl1.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="gl2.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="gl3.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="gl4.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="gl5.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            <div class="box">
+                <img src="hl.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div><div class="box">
+                <img src="hl.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div><div class="box">
+                <img src="hl2.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div><div class="box">
+                <img src="hl1.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div><div class="box">
+                <img src="hhl3.jpg" alt="">
+                <h3>bat1
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="pd.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="pd2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="pd3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="pd4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+
+        </section>
+        <h2>FOOTBALL</h2>
+        <section id="football">
+            </div><div class="box">
+                <img src="fb1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fb4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fb5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fb.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fb6.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh6.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh7.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh8.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="sh9.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fp1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fp2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fp4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fp5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="fp7.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+
+        </section>
+        <h2>TENNIS</h2>
+        <section id="tennis">
+            </div><div class="box">
+                <img src="ra.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ra2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ra3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ra4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ra5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ra6.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="tennis2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="tennis3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="tennis4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="tennis5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ts1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ts2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ts3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ts4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="ts5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+
+
+        </section>
+        <h2>HOCKEY</h2>
+        <section id="hockey">
+            </div><div class="box">
+                <img src="hs.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs6.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs7.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hs.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hb.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hb1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hb2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hb3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp2.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp3.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp5.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp6.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hp7.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hh.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hh1.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+            </div><div class="box">
+                <img src="hh4.jpg" alt="">
+                <h3>Football
+
+                </h3>
+                <p>Price: $99</p>
+                <button> cart</button>
+            </div>
+
+        </section>
+        <h2>Contact us</h2>
+        <div id="contact">
+            <form action="#" class="boxx">
+                <div>
+                    Name:<input type="name" placeholder="enter your name"><br>
+                Email:<input type="text" placeholder="enter your email"><br>
+                Mesage:<textarea name="text" id="text" placeholder="enter your message"></textarea><br>
+                <button type="submit">Send</button>
+                </div>
+
+            </form>
+            <div class="boxx">
+                <h2>Address #1</h2>
+                <p>Village and post office Nawagai tehsil mandanr distt Buner Pakhtunkhwa Pakistan</p>
+                <h2>Address #2</h2>
+                <p>Sector B-17 Multi Gardens Islamabad</p>
+
+
+            </div>
+            <div class="boxx">
+                <h2>Phone</h2>
+                <p>+923428994095</p>
+                <h2>Email</h2>
+                <p>ahmadubaidedu@gmail.com</p>
+                <h2>linkedin</h2>
+                <p>ahmad-ubaid061</p>
+
+            </div>
+        </div>
+    </main>
+    <hr>
+    <!-- Added for image overlay functionality -->
+<div id="imageOverlay" class="overlay">
+    <img src="" alt="Overlay Image">
+</div>
+    <footer>
+        <p>&copy2025 all rights reserved  Gull sports</p>
+    </footer>
+    <script>
+ // Search functionality
+            const searchButton = document.querySelector('.search-container button');
+            const searchInput = document.querySelector('input[name="search"]');
+            const sections = document.querySelectorAll('section');
+            const homeSection = document.getElementById('home');
+            const contactSection = document.getElementById('contact');
+
+            if (searchButton && searchInput) {
+                searchButton.addEventListener('click', () => {
+                    const searchTerm = searchInput.value.toLowerCase().trim();
+                    let matchFound = false;
+
+                    sections.forEach(section => {
+                        const sectionId = section.id.toLowerCase();
+                        const heading = section.previousElementSibling;
+                        if (searchTerm === '' || sectionId.includes(searchTerm)) {
+                            if (sectionId !== 'home' && sectionId !== 'contact') {
+                                section.style.display = 'grid';
+                                heading.style.display = '';
+                                if (searchTerm !== '') matchFound = true;
+                            }
+                        } else {
+                            section.style.display = 'none';
+                            heading.style.display = 'none';
+                        }
+                    });
+
+                        // Hide home and contact sections during search
+                if (homeSection && contactSection) {
+                    if (searchTerm === '') {
+                        homeSection.style.display = '';
+                        contactSection.style.display = '';
+                    } else {
+                        homeSection.style.display = 'none';
+                        contactSection.style.display = 'none';
+                    }
+                }
+            });
+        } else {
+            console.error('Search button or input not found');
+        }
+
+            // Autocomplete functionality
+            const suggestions = ['cricket', 'football', 'tennis', 'hockey'];
+            const datalist = document.getElementById('categories');
+
+            if (searchInput && datalist) {
+                searchInput.addEventListener('input', () => {
+                    const searchTerm = searchInput.value.toLowerCase().trim();
+                    datalist.innerHTML = '';
+                    const filteredSuggestions = suggestions.filter(s => s.toLowerCase().includes(searchTerm));
+                    filteredSuggestions.forEach(suggestion => {
+                        const option = document.createElement('option');
+                        option.value = suggestion;
+                        datalist.appendChild(option);
+                    });
+                });
+            } else {
+                console.error('Search input or datalist not found');
+            }
+            // Added: Reset page state when clicking Home link
+                const homeLink = document.querySelector('a[href="#home"]');
+                if (homeLink && homeSection && contactSection && searchInput) {
+                    homeLink.addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent default anchor behavior
+                        // Show all sections and their headings
+                        sections.forEach(section => {
+                            const heading = section.previousElementSibling;
+                            section.style.display = 'grid';
+                            if (heading && heading.tagName === 'H2') {
+                                heading.style.display = '';
+                            }
+                        });
+                        // Show home and contact
+                        homeSection.style.display = '';
+                        contactSection.style.display = '';
+                        // Clear search input
+                        searchInput.value = '';
+                        // Scroll to home
+                        homeSection.scrollIntoView({ behavior: 'smooth' });
+                    });
+                } else {
+                    console.error('Home link or required sections not found');
+                }
+
+            // Image overlay functionality
+            const images = document.querySelectorAll('section img');
+            const overlay = document.getElementById('imageOverlay');
+            const overlayImg = overlay ? overlay.querySelector('img') : null;
+
+            if (overlay && overlayImg) {
+                images.forEach((img, index) => {
+                    img.addEventListener('click', () => {
+                        try {
+                            overlayImg.src = img.src || img.getAttribute('src'); // Fallback for src
+                            overlayImg.alt = img.alt || `Product Image ${index + 1}`; // Ensure alt text
+                            overlay.style.display = 'flex'; // Show overlay
+                        } catch (error) {
+                            console.error('Error displaying overlay image:', error);
+                        }
+                    });
+                });
+
+                overlay.addEventListener('click', (e) => {
+                   
+                    if (e.target === overlay || e.target === overlayImg) {
+                        overlay.style.display = 'none';
+                        overlayImg.src = ''; 
+                    }
+                });
+            } else {
+                console.error('Overlay or overlay image element not found. Ensure #imageOverlay exists with an img child.');
+            }
+    </script>
+</body>
+
+</html>
