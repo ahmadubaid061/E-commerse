@@ -21,4 +21,11 @@ This repository contains the source code for "Gull Sports," a responsive e-comme
 - Libraries: Font Awesome (via CDN)
 - Tools:  VS Code
 - Hosting: GitHub Pages
-- 
+
+  
+# Contact
+Reach out to me:
+- Email: ahmadubaidedu@gmail.com
+- GitHub: ahmadubaid061
+- Website: https://[your-username].github.io/gull-sports/
+- LinkedIn: ahmad-ubaid061
